@@ -3,9 +3,6 @@ emailjs.init("YOUR_k2-3QiBGwgy_VuVr3");
 })();
 
 
-const form = document.getElementById("contactForm");
-const msg = document.getElementById("msg");
-
 form.addEventListener("submit", function(e){
 
 e.preventDefault();

@@ -126,3 +126,17 @@ align-items:center;
 }
 
 }
+
+.contact-info{
+font-size:18px;
+line-height:2;
+}
+
+.contact-info a{
+color:#00d9ff;
+text-decoration:none;
+}
+
+.contact-info a:hover{
+text-decoration:underline;
+}
