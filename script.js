@@ -1,9 +1,7 @@
-// EMAILJS INIT
 (function(){
 emailjs.init("YOUR_k2-3QiBGwgy_VuVr3");
 })();
 
-// CONTACT FORM
 
 const form = document.getElementById("contactForm");
 const msg = document.getElementById("msg");
@@ -31,8 +29,6 @@ msg.style.color="red";
 
 });
 
-
-// TYPING ANIMATION
 
 const text = ["Web Developer","Programmer","Student"];
 
@@ -64,8 +60,6 @@ setTimeout(type,150);
 type();
 
 
-// SCROLL ANIMATION
-
 const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
@@ -80,9 +74,6 @@ entry.target.classList.add("show");
 
 document.querySelectorAll(".hidden")
 .forEach(el=>observer.observe(el));
-
-
-// PARTICLES BACKGROUND
 
 particlesJS("particles-js",{
 particles:{
