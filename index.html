@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+
+<h1>My Portfolio</h1>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section id="hero">
+
+<h2>I am <span id="typing"></span></h2>
+<p>Aspiring Developer & Programmer</p>
+
+</section>
+
+<section id="about" class="hidden">
+
+<h2>About Me</h2>
+
+<p>
+Hello! I am a passionate programmer interested in building
+websites and software projects.
+</p>
+
+</section>
+
+<section id="skills" class="hidden">
+
+<h2>Skills</h2>
+
+<div class="card-container">
+
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Java</div>
+<div class="card">C Programming</div>
+
+</div>
+
+</section>
+
+<section id="projects" class="hidden">
+
+<h2>Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<h3>Women Safety System</h3>
+<p>Panic button with location tracking and threat detection.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Chemical Structure Analyzer</h3>
+<p>Analyze chemical structures and predict properties.</p>
+
+</div>
+
+<div class="card">
+
+<h3>Responsive Portfolio</h3>
+<p>A personal developer portfolio website.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="hidden">
+
+<h2>Contact Me</h2>
+
+<form id="contactForm">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<p id="msg"></p>
+
+</section>
+
+<footer>
+
+<p>© 2026 My Portfolio</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
