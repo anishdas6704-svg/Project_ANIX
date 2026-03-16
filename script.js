@@ -1,31 +1,3 @@
-(function(){
-emailjs.init("YOUR_k2-3QiBGwgy_VuVr3");
-})();
-
-
-form.addEventListener("submit", function(e){
-
-e.preventDefault();
-
-emailjs.sendForm(
-"service_ngih3ki",
-"template_93zsfnc",
-this
-).then(function(){
-
-msg.innerText="Message Sent Successfully!";
-msg.style.color="lightgreen";
-form.reset();
-
-}, function(){
-
-msg.innerText="Failed to send message!";
-msg.style.color="red";
-
-});
-
-});
-
 
 const text = ["Web Developer","Programmer","Student"];
 
@@ -57,6 +29,8 @@ setTimeout(type,150);
 type();
 
 
+
+
 const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
@@ -72,7 +46,62 @@ entry.target.classList.add("show");
 document.querySelectorAll(".hidden")
 .forEach(el=>observer.observe(el));
 
+
+
+const skillSection=document.querySelector("#skills");
+
+const skillObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+document.querySelector(".html").style.width="90%";
+document.querySelector(".css").style.width="85%";
+document.querySelector(".js").style.width="75%";
+document.querySelector(".java").style.width="80%";
+
+}
+
+});
+
+});
+
+skillObserver.observe(skillSection);
+
+
+
+
+fetch("https://api.github.com/users/anishdas6704-svg/repos")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+const container=document.getElementById("github-projects");
+
+data.slice(0,6).forEach(repo=>{
+
+const card=document.createElement("div");
+
+card.className="card";
+
+card.innerHTML=`
+<h3>${repo.name}</h3>
+<p>${repo.description || "No description available."}</p>
+<a href="${repo.html_url}" target="_blank">View Project</a>
+`;
+
+container.appendChild(card);
+
+});
+
+});
+
+
+
 particlesJS("particles-js",{
+
 particles:{
 number:{value:80},
 color:{value:"#ffffff"},
@@ -102,4 +131,5 @@ mode:"repulse"
 },
 
 retina_detect:true
+
 });
